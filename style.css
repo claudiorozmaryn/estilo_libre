@@ -1,0 +1,952 @@
+*{
+  margin: 0%;
+  padding: 0%;
+}
+/* variables */
+:root{
+  --fondo_body: rgb(255, 248, 238);
+  --fondo_de_cosas: rgb(252, 236, 210);
+  --color_de_letras: rgb(72, 180, 190);
+  --tipo_de_letra_parrafo: "Playpen Sans";
+  --tipo_de_letra_titulo: "Luckiest Guy";
+
+}
+
+body{
+  margin: 0;
+  background-color: var(--fondo_body);
+}
+
+
+
+header {
+    position: sticky;
+
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 15px 20px;
+
+    font-family: "Inter", sans-serif;
+    background-color: var(--fondo_de_cosas);
+    color: var(--color_de_letras);
+
+    border-radius: 0 0 35px 35px;
+
+    box-shadow:-1px 6px 17px 11px rgba(255, 227, 188, 0.55);
+    
+     z-index: 1000;
+
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 70px;
+    height: auto;
+}
+
+h1 {
+    flex: 1;
+
+    margin: 0;
+
+    font-family: var(--tipo_de_letra_titulo);
+    font-size: 40px;
+    font-weight: 100;
+
+    text-align: center;
+}
+
+.redes {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.logo_ig,
+.logo_wpp {
+    width: 22px;
+    height: auto;
+}
+
+.boton_menu {
+    font-size: 28px;
+
+    background: none;
+    border: none;
+
+    color: var(--color_de_letras);
+
+    cursor: pointer;
+}
+
+/* MENU CERRADO */
+
+.menu {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+    right: 20px;
+
+    width: 220px;
+
+    background-color: white;
+
+    border-radius: 0 0 15px 15px;
+
+    box-shadow:
+        0 8px 15px rgba(0, 0, 0, 0.15);
+
+    z-index: 1000;
+}
+
+
+/* MENU ABIERTO */
+
+.menu.activo {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* LINKS */
+
+.menu a {
+    padding: 15px 20px;
+
+    text-decoration: none;
+
+    color: var(--color_de_letras);
+
+    border-bottom: 1px solid #ddd;
+}
+
+.menu a:last-child {
+    border-bottom: none;
+}
+
+.menu a:hover {
+    background-color: var(--fondo_de_cosas);
+}
+
+
+
+
+
+
+
+
+
+
+/* BEINVENIDA */
+
+.bienvenida {
+  display: flex;
+  flex-direction: column;
+
+  width: calc(100% - 40px);
+
+  margin: 35px auto;
+  padding: 25px 30px;
+
+  box-sizing: border-box;
+
+  font-family: "Inter", sans-serif;
+  background-color: var(--fondo_de_cosas);
+
+  border-radius: 60px;
+}
+
+.bienvenida h2 {
+  text-align: center;
+  font-family: var(--tipo_de_letra_titulo);
+
+  margin: 10px auto 25px auto;
+
+  font-size: 30px;
+  font-weight: 50;
+
+  background-color: transparent;
+}
+
+
+.contenido-bienvenida {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+}
+
+.solcito {
+  width: 180px;
+  height: auto;
+  animation: aparecer 2s;
+  position: relative;
+}
+
+@keyframes aparecer{
+  from{
+    opacity: 0 ;
+    top: 20px;
+    transform: scale(0.1) rotate(0deg);
+  }
+
+  to{
+    opacity: 1;
+    top: 0;
+    transform: scale(1) rotate(720deg);
+  }
+}
+
+.solcito:hover{
+    transform: rotate(360deg);
+    transition: transform 1s ease-in-out;
+  }
+
+.presentacion {
+  flex: 1;
+  text-align: left;
+  font-family: var(--tipo_de_letra_parrafo);
+  background-color: var(--fondo_body);
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+
+
+
+
+
+/* HISTORIA */
+
+.seccion_historia {
+  display: flex;
+  flex-direction: column;
+
+  width: calc(100% - 20px);
+  margin: 35px auto;
+  padding: 25px 30px;
+
+  box-sizing: border-box;
+
+  background-color: var(--fondo_de_cosas);
+  border-radius: 60px;
+}
+
+.historia {
+  text-align: center;
+  font-family: var(--tipo_de_letra_titulo);
+
+  margin: 10px auto 25px auto;
+
+  font-size: 30px;
+  font-weight: 50;
+
+  background-color: transparent;
+}
+
+.contenido_historia {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Mantiene la proporción del video cubriendo todo el espacio */
+  z-index: -1; /* Coloca el video detrás de todo el contenido */
+}
+
+
+.resumen {
+  flex: 1;
+
+  text-align: left;
+  font-family: var(--tipo_de_letra_parrafo);
+  background-color: var(--fondo_body);
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.pileta {
+  width: 300px;
+  height: 300px;
+
+  object-fit: cover;
+  border-radius: 20px;
+
+  margin: 0;
+}
+
+/* HORARIOS */
+
+.seccion_horarios {
+  width: calc(100% - 20px);
+  margin: 35px auto;
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background-color: var(--fondo_de_cosas);
+  border-radius: 60px;
+}
+
+
+.horarios {
+  text-align: center;
+  font-family: var(--tipo_de_letra_titulo);
+
+  margin: 0 0 25px 0;
+
+  font-size: 30px;
+  font-weight: 50;
+
+  background-color: transparent;
+}
+
+.contenido_horarios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  max-width: 750px;
+  margin: 0 auto;
+
+  gap: 25px;
+
+  background-color: transparent;
+  padding: 0;
+}
+
+.turnos,
+.guardia {
+  background-color: var(--fondo_body);
+
+  padding: 25px;
+
+  border-radius: 25px;
+
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+}
+
+.turnos p,
+.guardia p {
+  text-align: center;
+
+  font-family: var(--tipo_de_letra_parrafo);
+
+  margin-bottom: 15px;
+
+  color: var(--color_de_letras);
+}
+
+.turnos ul,
+.guardia ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  font-family: var(--tipo_de_letra_parrafo);
+}
+
+.turnos li,
+.guardia li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.turnos,
+.guardia {
+  transition: transform 0.3s ease;
+}
+
+.turnos:hover,
+.guardia:hover {
+  transform: translateY(-5px);
+}
+
+/* ARANCELES */
+
+#aranceles {
+  width: calc(100% - 20px);
+  margin: 35px auto;
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background-color: var(--fondo_de_cosas);
+  border-radius: 60px;
+}
+
+/* TITULO */
+
+.seccion_aranceles {
+  text-align: center;
+  font-family: var(--tipo_de_letra_titulo);
+
+  font-size: 30px;
+  font-weight: 100;
+
+  margin: 0 0 25px 0;
+
+  background-color: transparent;
+}
+
+/* IMAGEN DE PRECIOS */
+
+.aranceles {
+  display: block;
+
+  width: 90%;
+  max-width: 650px;
+  height: auto;
+
+  margin: 0 auto;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  background-color: var(--fondo_body);
+
+  border-radius: 25px;
+
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.3s ease;
+}
+
+.aranceles:hover {
+  transform: translateY(-5px);
+}
+
+
+/* UBICACION */
+
+#ubicacion {
+  width: calc(100% - 20px);
+
+  margin: 35px auto;
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background-color: var(--fondo_de_cosas);
+  border-radius: 60px;
+}
+
+.seccion_ubicacion {
+  text-align: center;
+
+  font-family: var(--tipo_de_letra_titulo);
+  font-size: 30px;
+  font-weight: 100;
+
+  margin: 0 0 20px 0;
+
+  background-color: transparent;
+}
+
+.texto_ubicacion {
+  max-width: 750px;
+
+  margin: 0 auto 25px auto;
+  padding: 20px 25px;
+
+  text-align: center;
+
+  font-family: var(--tipo_de_letra_parrafo);
+  line-height: 1.5;
+
+  background-color: var(--fondo_body);
+
+  border-radius: 25px;
+
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+}
+
+.mapa {
+  display: block;
+
+  width: 90%;
+  max-width: 650px;
+  height: 350px;
+
+  margin: 0 auto;
+
+  border: 15px solid var(--fondo_body);
+  border-radius: 25px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.mapa:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+/* PLANILLAS */
+
+#planillas {
+  width: calc(100% - 20px);
+
+  margin: 35px auto;
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background-color: var(--fondo_de_cosas);
+  border-radius: 60px;
+}
+
+
+/* TITULO */
+
+.planillas {
+  text-align: center;
+
+  font-family: var(--tipo_de_letra_titulo);
+  font-size: 30px;
+  font-weight: 50;
+
+  margin: 0 0 25px 0;
+
+  background-color: transparent;
+}
+
+
+/* TEXTO */
+
+.texto_planillas {
+  max-width: 750px;
+
+  margin: 0 auto 25px auto;
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  font-family: var(--tipo_de_letra_parrafo);
+  line-height: 1.5;
+
+  background-color: var(--fondo_body);
+
+  border-radius: 25px;
+
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* CONTENEDOR DE LOS 4 PDF */
+
+.contenido_planillas {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  max-width: 750px;
+
+  margin: 0 auto;
+
+  gap: 20px;
+}
+
+
+/* BOTONES PDF */
+
+.pdf {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 70px;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  background-color: var(--fondo_body);
+
+  border-radius: 25px;
+
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+
+  text-decoration: none;
+
+  color: var(--color_de_letras);
+
+  font-family: var(--tipo_de_letra_parrafo);
+  font-weight: bold;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+
+/* EFECTO */
+
+.pdf:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* contacto */
+/* CONTACTO */
+
+#contacto {
+  width: calc(100% - 20px);
+
+  margin: 35px auto;
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background-color: var(--fondo_de_cosas);
+  border-radius: 60px;
+}
+
+
+/* TITULO */
+
+.contacto {
+  text-align: center;
+
+  font-family: var(--tipo_de_letra_titulo);
+  font-size: 30px;
+  font-weight: 50;
+
+  margin: 0 0 25px 0;
+
+  background-color: transparent;
+}
+
+
+/* TEXTO SUPERIOR */
+
+.texto_contacto {
+  max-width: 750px;
+
+  margin: 0 auto 25px auto;
+  padding: 20px;
+
+  text-align: center;
+
+  font-family: var(--tipo_de_letra_parrafo);
+  line-height: 1.5;
+
+  background-color: var(--fondo_body);
+
+  border-radius: 25px;
+
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* CONTENEDOR */
+
+.contenido_contacto {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  max-width: 950px;
+
+  margin: 0 auto;
+
+  gap: 20px;
+}
+
+
+/* TARJETAS */
+
+.tarjeta_contacto {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  text-align: center;
+
+  font-family: var(--tipo_de_letra_parrafo);
+
+  background-color: var(--fondo_body);
+
+  border-radius: 25px;
+
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+
+/* TITULOS TARJETAS */
+
+.tarjeta_contacto h3 {
+  margin-bottom: 10px;
+
+  color: var(--color_de_letras);
+}
+
+
+.tarjeta_contacto p {
+  margin-bottom: 12px;
+}
+
+
+.tarjeta_contacto a {
+  margin: 5px 0;
+
+  text-decoration: none;
+
+  color: var(--color_de_letras);
+
+  font-weight: bold;
+}
+
+
+.tarjeta_contacto:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.tarjeta_contacto a:hover {
+  text-decoration: underline;
+}
+
+.gracias_contacto {
+  margin-top: 25px;
+
+  text-align: center;
+
+  font-family: var(--tipo_de_letra_parrafo);
+  font-weight: bold;
+}
+
+/* FOOTER */
+/* FOOTER */
+
+.footer {
+  width: 100%;
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background-color: var(--fondo_de_cosas);
+
+  font-family: var(--tipo_de_letra_parrafo);
+
+  color: var(--color_de_letras);
+
+  border-radius: 35px 35px 0 0;
+
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.footer p {
+  margin: 8px 0;
+}
+
+/* ========================= */
+/* RESPONSIVE PARA CELULAR */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+
+  header {
+    gap: 10px;
+    padding: 10px 15px;
+    border-radius: 0 0 25px 25px;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  h1 {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .logo_ig,
+  .logo_wpp {
+    width: 20px;
+  }
+
+  .boton_menu {
+    font-size: 25px;
+  }
+
+  .menu {
+    right: 10px;
+    width: 200px;
+  }
+
+
+  /* TODAS LAS BURBUJAS GRANDES */
+
+  .bienvenida,
+  .seccion_historia,
+  .seccion_horarios,
+  #aranceles,
+  #ubicacion,
+  #planillas,
+  #contacto {
+    width: calc(100% - 20px);
+
+    margin: 20px auto;
+    padding: 20px;
+
+    border-radius: 35px;
+  }
+
+
+  /* TITULOS */
+
+  .bienvenida h2,
+  .historia,
+  .horarios,
+  .seccion_aranceles,
+  .seccion_ubicacion,
+  .planillas,
+  .contacto {
+    font-size: 25px;
+  }
+
+
+  /* BIENVENIDA */
+
+  .contenido-bienvenida {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .presentacion {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .solcito {
+    width: 150px;
+  }
+
+
+  /* HISTORIA */
+
+  .contenido_historia {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pileta {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .resumen {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+
+  /* HORARIOS */
+
+  .contenido_horarios {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 15px;
+  }
+
+
+  /* ARANCELES */
+
+  .aranceles {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 15px;
+  }
+
+
+  /* UBICACION */
+
+  .texto_ubicacion {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .mapa {
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+  }
+
+
+  /* PLANILLAS */
+
+  .contenido_planillas {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .texto_planillas {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+
+  /* CONTACTO */
+
+  .contenido_contacto {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+
+  /* FOOTER */
+
+  .footer {
+    padding: 20px 15px;
+    border-radius: 25px 25px 0 0;
+  }
+}
