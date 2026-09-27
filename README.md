@@ -6,9 +6,7 @@ El proyecto busca presentar de forma clara y accesible la información principal
 
 ## 🌐 Demo
 
-Próximamente disponible online mediante GitHub Pages.
-
-## 🛠️ Tecnologías utilizadas
+https://claudiorozmaryn.github.io/estilo_libre/
 
 - HTML5
 - CSS3
