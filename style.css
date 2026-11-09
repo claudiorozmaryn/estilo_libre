@@ -412,32 +412,26 @@ h1 {
 
 /* IMAGEN DE PRECIOS */
 
+.contenedor_aranceles {
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow-x: auto;
+  background-color: var(--fondo_body);
+  border-radius: 20px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+}
+
 .aranceles {
   display: block;
-
-  width: 90%;
-  max-width: 650px;
+  width: 100%;
   height: auto;
-
-  margin: 0 auto;
-
-  padding: 25px;
-
-  box-sizing: border-box;
-
-  background-color: var(--fondo_body);
-
-  border-radius: 25px;
-
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
-
-  transition: transform 0.3s ease;
+  margin: 0;
+  padding: 0;
 }
 
-.aranceles:hover {
-  transform: translateY(-5px);
+.aviso_aranceles {
+  display: none;
 }
-
 
 /* UBICACION */
 
@@ -900,13 +894,22 @@ h1 {
 
   /* ARANCELES */
 
-  .aranceles {
-    width: 100%;
-    max-width: 100%;
+ #aranceles {
+  padding: 20px 12px;
+}
 
-    padding: 15px;
-  }
+.aviso_aranceles {
+  display: block;
+  margin-bottom: 15px;
+  font-family: var(--tipo_de_letra_parrafo);
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
 
+.aranceles {
+  min-width: 700px;
+}
 
   /* UBICACION */
 
@@ -949,4 +952,8 @@ h1 {
     padding: 20px 15px;
     border-radius: 25px 25px 0 0;
   }
+}
+
+.aranceles_descuento {
+  margin-top: 25px;
 }

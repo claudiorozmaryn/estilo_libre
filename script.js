@@ -12,3 +12,11 @@ botonMenu.addEventListener("click", () => {
     }
 
 });
+const enlacesMenu = document.querySelectorAll("#menu a");
+
+enlacesMenu.forEach((enlace) => {
+  enlace.addEventListener("click", () => {
+    menu.classList.remove("activo");
+    botonMenu.textContent = "☰";
+  });
+});
