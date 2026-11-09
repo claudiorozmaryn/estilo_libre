@@ -413,17 +413,26 @@ h1 {
 /* IMAGEN DE PRECIOS */
 
 .contenedor_aranceles {
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  overflow-x: auto;
+
+  overflow: hidden;
+
   background-color: var(--fondo_body);
   border-radius: 20px;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
 }
 
+.contenedor_aranceles picture {
+  display: block;
+  width: 100%;
+}
+
 .aranceles {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
   margin: 0;
   padding: 0;
@@ -894,21 +903,33 @@ h1 {
 
   /* ARANCELES */
 
- #aranceles {
-  padding: 20px 12px;
+/* ARANCELES PARA CELULAR */
+
+#aranceles {
+  padding: 20px 5px;
 }
 
-.aviso_aranceles {
-  display: block;
-  margin-bottom: 15px;
-  font-family: var(--tipo_de_letra_parrafo);
-  font-size: 14px;
-  line-height: 1.5;
-  text-align: center;
+.contenedor_aranceles {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.contenedor_aranceles picture {
+    display: block;
+    width: 100%;
 }
 
 .aranceles {
-  min-width: 700px;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.aranceles_descuento {
+  margin-top: 25px;
 }
 
   /* UBICACION */

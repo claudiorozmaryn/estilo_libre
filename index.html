@@ -154,28 +154,51 @@
         </div>
     </section>
 
+<!-- ARANCELES -->
 <section id="aranceles">
+
     <h2 class="seccion_aranceles">Aranceles</h2>
 
+    <!-- PRECIOS NORMALES -->
+    <div class="contenedor_aranceles">
 
-    <div class="contenedor_aranceles"
-         tabindex="0"
-         role="region"
-         aria-label="Tabla de aranceles con desplazamiento horizontal">
+        <picture>
 
-        <img src="./Imagenes/arancel (1400 x 900 px).png"
-             alt="Aranceles de diciembre, enero y febrero de Estilo Libre"
-             class="aranceles">
+            <!-- CELULAR -->
+            <source
+                media="(max-width: 768px)"
+                srcset="./Imagenes/arancel(1080x1350px).png">
+
+            <!-- COMPUTADORA -->
+            <img
+                src="./Imagenes/arancel(1080x1350px).png"
+                alt="Aranceles de diciembre, enero y febrero"
+                class="aranceles">
+
+        </picture>
+
     </div>
-    <div class="contenedor_aranceles aranceles_descuento"
-     tabindex="0"
-     role="region"
-     aria-label="Aranceles con 10% de descuento">
 
-    <img src="./Imagenes/aranceles-descuento.png"
-         alt="Aranceles de enero y febrero con 10% de descuento"
-         class="aranceles">
-</div>
+    <!-- PRECIOS CON DESCUENTO -->
+    <div class="contenedor_aranceles aranceles_descuento">
+
+        <picture>
+
+            <!-- CELULAR -->
+            <source
+                media="(max-width: 768px)"
+                srcset="./Imagenes/arancel_descuento(1080x1350px).png">
+
+            <!-- COMPUTADORA -->
+            <img
+                src="./Imagenes/aranceles_descuento(1400x900px).png"
+                alt="Aranceles de enero y febrero con descuento"
+                class="aranceles"
+                loading="lazy">
+
+        </picture>
+
+    </div>
 
 </section>
 
