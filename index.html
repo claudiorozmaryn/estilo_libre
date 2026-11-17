@@ -7,6 +7,23 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 </script>
+    <!-- Event snippet for Contacto por Whatsapp conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18581430791/KURVCNawvLodEIfEqJxF',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
@@ -44,7 +61,7 @@ content="Estilo Libre, colonia de vacaciones en Munro, Vicente López. Jornada c
                  class="logo_ig">
         </a>
 
-        <a href="https://wa.me/541162609166" target="_blank">
+        <a href="https://wa.me/541162609166" target="_blank" onclick="gtag_report_conversion();">
             <img src="./Imagenes/whatsapp (1).png"
                  alt="WhatsApp"
                  class="logo_wpp">
@@ -277,11 +294,11 @@ content="Estilo Libre, colonia de vacaciones en Munro, Vicente López. Jornada c
 
             <p>Coordinadores</p>
 
-            <a href="https://wa.me/541162609166" target="_blank">
+            <a href="https://wa.me/541162609166" target="_blank" onclick="gtag_report_conversion();">
                 Ignacio
             </a>
 
-            <a href="https://wa.me/541144019272" target="_blank">
+            <a href="https://wa.me/541144019272" target="_blank" onclick="gtag_report_conversion();">
                 Claudio
             </a>
         </div>
